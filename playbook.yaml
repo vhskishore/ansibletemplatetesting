@@ -1,6 +1,7 @@
 ---
   - name: Play for Install Nginx on WebServers
     hosts: localhost
+    connection: local
     gather_facts: yes
     vars:
       custom_heading: "Welcome To DevOps Training B13 By Sreeharsha Veerapalli"
