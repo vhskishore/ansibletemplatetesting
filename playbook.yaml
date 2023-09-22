@@ -11,6 +11,9 @@
       fqdn_name: "{{ ansible_facts['fqdn'] }}"
       ip_address: "{{ ansible_facts['eth0']['ipv4']['address'] }}"
     tasks:
+      - name: Display all interfaces name
+        debug:
+          var: ansible_facts.interfaces
        - name: Install Nginx Server
          apt: >
            name=nginx
